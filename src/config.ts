@@ -21,12 +21,11 @@ if (!config.localeRepo) {
 }
 
 if (!config.resourceName) {
-  const { owner, repo } = github.context.repo;
-  const currentRepository = `${owner}/${repo}`;
+  const { repo } = github.context.repo;
 
-  core.warning(`The 'resource-name' was not specified, using '${currentRepository}'. Please define explicitly the repositor as 'owner/repository'.`);
+  core.warning(`The 'resource-name' was not specified, using '${repo}'. Please define explicitly the repositor as 'owner/repository'.`);
   
-  config.resourceName = currentRepository;
+  config.resourceName = repo;
 }
 
 if (!config.localeDirectory) {
