@@ -7,6 +7,8 @@ import { fetchLocaleFileRefs, getGithubFileContent } from './fetchFiles';
 
 export async function run() {
   try {
+    core.info('Easter Egg *wink wink*');
+
     const workspace = process.env.GITHUB_WORKSPACE;
     if (!workspace) {
       throw new Error('GITHUB_WORKSPACE environment variable is not set.');
