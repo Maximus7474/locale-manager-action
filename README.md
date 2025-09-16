@@ -33,7 +33,7 @@ jobs:
 
       # fetches the new files from the locale-repo (has to be public)
       - name: Update locale files
-        uses: Maximus7474/locale-manager-action@v0.2.0
+        uses: Maximus7474/locale-manager-action@v1.0.0
         with:
           resource-name: 'mps-fleecanow'
           locale-repo: 'Maximus7474/mps-locales'
