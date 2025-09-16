@@ -52,7 +52,7 @@ jobs:
 
       - name: Update repository
         run: |
-          git add dist/
+          git add .
           git commit -am '${{ github.ref_name }}'
           git push origin tag ${{ github.ref_name }}
 
