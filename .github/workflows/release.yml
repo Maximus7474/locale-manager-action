@@ -63,7 +63,6 @@ jobs:
           repo_token: '${{ secrets.GITHUB_TOKEN }}'
           title: '${{ env.RELEASE_VERSION }}'
           prerelease: false
-          files: ${{ github.event.repository.name }}.zip
 
         env:
           CI: false
