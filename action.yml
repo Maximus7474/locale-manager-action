@@ -1,0 +1,16 @@
+name: 'Update locales from external repository'
+description: 'Gather the latest version of the locale files in a public repository to add them to a closed source project.'
+inputs:
+  locale-repo:
+    description: 'The name of the locale repository: Maximus7474/locales-manager-template'
+    required: true
+  resource-name:
+    description: 'Name of the resource which is referenced in the locale repository (defaults to repository name)'
+    required: false
+  locale-directory:
+    description: 'Relative directory to store the newly obtained locale files (defaults to "./locales")'
+    required: false
+
+runs:
+  using: 'node20'
+  main: 'dist/index.js'
