@@ -54,7 +54,7 @@ jobs:
         run: |
           git add dist/
           git commit -am '${{ github.ref_name }}'
-          git push
+          git push origin tag ${{ github.ref_name }}
 
       - name: Create Release
         uses: 'marvinpinto/action-automatic-releases@v1.2.1'
